@@ -1,0 +1,233 @@
+/* style.css - optional overrides */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Slightly larger hero padding on big screens */
+@media (min-width: 992px) {
+  section.bg-light.py-5 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Make card images cover */
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Improve footer contrast */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+ 
+    /* 🌸 Custom Carousel Image Styling */
+    .carousel-item img {
+      height: 400px;         /* Fixes all carousel images to same height */
+      object-fit: cover;     /* Keeps image centered and prevents stretching */
+    }
+
+    /* 📱 Make smaller height on mobile screens */
+    @media (max-width: 768px) {
+      .carousel-item img {
+        height: 250px;       /* Smaller height for mobile devices */
+      }
+    }
+  
+    html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Transflower Theme ===== */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Override Bootstrap colors */
+:root {
+  --bs-primary: #1662aa;       /* blossom pink */
+  --bs-secondary: #4caf50;     /* leaf green */
+  --bs-warning: #ffeb3b;       /* sunshine yellow */
+}
+
+/* Navbar tweak */
+.navbar {
+  background-color: var(--bs-primary) !important;
+}
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+.navbar .nav-link:hover {
+  color: var(--bs-warning) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+  background-color: #c2185b;
+  border-color: #c2185b;
+}
+
+/* Cards */
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(99, 17, 17, 0.1);
+  border-radius: 10px;
+}
+
+
+.carousel-caption h5,
+.carousel-caption p {
+  background-color: rgba(233, 30, 99, 0.6); /* translucent pink */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
+}
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
+  border-color: var(--bs-primary);
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.nav-link.active {
+  color: var(--bs-primary) !important;
+  font-weight: 600;
+}
+
+
+/* ---------- form card styling ---------- */
+form#contactForm {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* soften modal corners */
+.modal-content {
+  border-radius: 12px;
+}
+
+/* small responsive tweak */
+@media (max-width: 576px) {
+  form#contactForm {
+    padding: 20px;
+  }
+}
+
+
+.btn-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background-color: #c21818;
+}
+
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.navbar-brand i {
+  animation: bloom 2s ease-in-out infinite alternate;
+}
+
+@keyframes bloom {
+  0% { transform: scale(1); color: #fff; }
+  100% { transform: scale(1.2); color: #ffeb3b; }
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(226, 30, 233, 0.25);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #e91e6f;
+  color: #fff;
+}
+
+.tab-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*for flexbox hero section */
+h1 {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.lead {
+  color: #555;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/*footer style*/
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+footer a:hover {
+  text-decoration: underline !important;
+}
+
+footer {
+  background-color: var(--bs-secondary) !important;
+}
+
+/* Login Form Enhancements */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.btn-danger {
+  border-radius: 25px;
+}
+
+.card-header h4 {
+  letter-spacing: 1px;
+}
+

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transflower Store — Register</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Full-page background image. Replace URL with your own image path. */
+    body {
+      background-image: url('images/register.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    /* Semi-opaque form container for readable text */
+    .glass-card {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(4px);
+      border-radius: 12px;
+    }
+
+    /* Small helper for toast container on mobile */
+    .toast-container {
+      z-index: 1080;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Toast container (position fixed) -->
+<div class="position-fixed bottom-0 end-0 p-3 toast-container" aria-live="polite" aria-atomic="true">
+  <!-- Success toast shown after successful registration -->
+  <div id="regSuccessToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Registration successful! Welcome to Transflower 🌸
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Centered container -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="card shadow-lg glass-card">
+        <div class="card-header bg-danger text-white text-center">
+          <h4 class="mb-0">🌸 Create Your Account</h4>
+        </div>
+
+        <div class="card-body p-4">
+          <!-- Dynamic alert placeholder (inserted by JS on error or info) -->
+          <div id="alertPlaceholder" aria-live="polite"></div>
+
+          <!-- Registration form -->
+          <form id="registrationForm" novalidate>
+            <!-- First name -->
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" required>
+              <div class="invalid-feedback">Please enter your first name.</div>
+            </div>
+
+            <!-- Last name -->
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" required>
+              <div class="invalid-feedback">Please enter your last name.</div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">Please provide a valid email.</div>
+            </div>
+
+            <!-- Password with show/hide toggle and strength hint -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-group">
+                <input type="password" class="form-control" id="password" required minlength="6" aria-describedby="passwordHelp">
+                <button type="button" class="btn btn-outline-secondary" id="togglePassword" aria-label="Show password">Show</button>
+              </div>
+              <div id="passwordHelp" class="form-text">Minimum 6 characters. Use letters & numbers for better strength.</div>
+              <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+            </div>
+
+            <!-- Terms checkbox with link to modal -->
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="terms" required>
+              <label class="form-check-label" for="terms">
+                I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Conditions</a>
+              </label>
+              <div class="invalid-feedback">You must agree before submitting.</div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-danger w-100" id="registerBtn">Register</button>
+
+            <!-- Small link to login -->
+            <div class="text-center mt-3">
+              <small>Already have an account? <a href="login.html">Login here</a></small>
+            </div>
+          </form>
+        </div> <!-- /.card-body -->
+      </div> <!-- /.card -->
+    </div>
+  </div>
+</div>
+
+<!-- Terms & Conditions Modal (used by the terms link) -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="termsModalLabel">Transflower Store — Terms & Conditions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Short, readable T&C content — replace with real terms -->
+        <p><strong>Welcome!</strong> By registering at Transflower Store you agree to our terms. This sample modal demonstrates how to show lengthy legal text in a scrollable dialog so user can review before agreeing.</p>
+        <p>Replace this text with your real Terms & Conditions. Keep headings, short paragraphs and a link to the full policy page.</p>
+        <hr>
+        <p class="small text-muted">This is example content only.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- Button to demonstrate "Accept terms" — will check the checkbox when clicked -->
+        <button type="button" class="btn btn-danger" id="acceptTermsBtn">Accept & Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS bundle (Popper included) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  (function () {
+    'use strict';
+
+    // Helper: create a Bootstrap alert element and insert into #alertPlaceholder
+    function showAlert(message, type = 'danger', dismissible = true) {
+      const placeholder = document.getElementById('alertPlaceholder');
+      // Create alert div
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = `
+        <div class="alert alert-${type} ${dismissible ? 'alert-dismissible' : ''} fade show" role="alert">
+          ${message}
+          ${dismissible ? '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' : ''}
+        </div>
+      `;
+      // Replace previous alerts (keeps only one)
+      placeholder.innerHTML = '';
+      placeholder.append(wrapper);
+    }
+
+    // Toggle password visibility
+    const togglePwdBtn = document.getElementById('togglePassword');
+    const pwdInput = document.getElementById('password');
+    togglePwdBtn.addEventListener('click', () => {
+      const isHidden = pwdInput.type === 'password';
+      pwdInput.type = isHidden ? 'text' : 'password';
+      togglePwdBtn.textContent = isHidden ? 'Hide' : 'Show';
+      // keep focus on input after toggle for UX
+      pwdInput.focus();
+    });
+
+    // Accept terms button in modal checks the terms checkbox and closes the modal
+    const acceptTermsBtn = document.getElementById('acceptTermsBtn');
+    acceptTermsBtn.addEventListener('click', () => {
+      document.getElementById('terms').checked = true;
+      const modalEl = document.getElementById('termsModal');
+      const modal = bootstrap.Modal.getInstance(modalEl);
+      modal.hide();
+    });
+
+    // Form validation and submission simulation
+    const form = document.getElementById('registrationForm');
+    form.addEventListener('submit', function (event) {
+      // Prevent page reload for this demo — simulate server-side processing
+      event.preventDefault();
+      event.stopPropagation();
+
+      // Standard browser validation
+      if (!form.checkValidity()) {
+        // Show validation UI
+        form.classList.add('was-validated');
+        // Show a friendly inline alert
+        showAlert('Please fix the errors highlighted below and try again.', 'warning');
+        return;
+      }
+
+      // At this point front-end validation passed. Show success toast and clear form.
+      // In real app: send fetch/AJAX request to your backend here and show toast on success / show alert on failure.
+      const toastEl = document.getElementById('regSuccessToast');
+      const toast = new bootstrap.Toast(toastEl, { delay: 3500 });
+      toast.show();
+
+      // Optional: show inline success alert as well
+      showAlert('<strong>Success!</strong> Account created. Redirecting to login...', 'success');
+
+      // Simulate redirect after a short delay (replace with actual redirect once account created server-side)
+      setTimeout(() => {
+        // clear the form
+        form.reset();
+        form.classList.remove('was-validated');
+        // redirect to login page (uncomment or modify to your route)
+        // window.location.href = 'login.html';
+      }, 1600);
+    }, false);
+
+    // Accessibility: enable keyboard activation of modal accept button (Enter)
+    document.getElementById('termsModal').addEventListener('shown.bs.modal', () => {
+      document.getElementById('acceptTermsBtn').focus();
+    });
+
+  })();
+</script>
+</body>
+</html>

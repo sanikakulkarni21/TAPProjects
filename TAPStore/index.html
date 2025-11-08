@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transflower Store</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- include icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS LINKS-->
+   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">  
+
+<!-- Custom CSS (optional) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-flower1 me-2"></i>Transflower
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html"><i class="bi bi-basket"></i> Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+       
+        
+         <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>   <!-- 👈 Link to Login page -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a> <!-- 👈 Link to Register page -->
+        </li>
+       <button class="btn btn-outline-light ms-3" data-bs-toggle="modal" data-bs-target="#contactModal"> Contact Us</button>
+      </ul>
+    </div>
+      
+
+
+</div>
+
+  </div>
+</nav>
+ <!--<section id="home"> ... </section>
+<section id="products"> ... </section>
+<section id="about"> ... </section> -->
+
+<br>
+<!-- Scroll-to-Top Button -->
+<button id="scrollTopBtn" class="btn btn-primary position-fixed bottom-0 end-0 m-4" style="display:none;">↑</button>
+
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = () => {
+    if (document.documentElement.scrollTop > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+  scrollBtn.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+</script>
+<br>
+
+
+
+ <!-- Carousel -->
+<section class="text-center py-5 bg-light">
+  <div class="container">
+
+    <h1 class="fw-bold">Welcome to Transflower Store</h1>
+    <p class="lead">Nature-inspired beauty delivered fresh every day.</p>
+
+    <!-- Carousel -->
+<div id="storeCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/wallpaper3.jpg" 
+           class="d-block w-100" alt="Slide 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Fresh Flowers Everyday</h5>
+        <p>Explore nature’s beauty with us!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/wallpaper1.jpg" 
+           class="d-block w-100" alt="Slide 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Seasonal Specials</h5>
+        <p>Freshly handpicked for every occasion.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/wallpaper2.jpg" 
+           class="d-block w-100" alt="Slide 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Gift Happiness</h5>
+        <p>Send love wrapped in petals.</p>
+      </div>
+    </div>
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#storeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#storeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+    <a href="products.html" class="btn btn-primary btn-lg mt-3">Explore Flowers</a>
+    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+  </div>
+</section>
+
+<!--flexbox for hero section-->
+<header class="bg-light py-5">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+    <div class="text-center text-md-start">
+      <h1 class="fw-bold text-danger">Fresh Flowers, Fresh Smiles 🌸</h1>
+      <p class="lead text-muted">Delivering happiness across India — every bouquet tells a story.</p>
+      <a href="#" class="btn btn-danger btn-lg mt-3">Shop Now</a>
+    </div>
+    <div class="mt-4 mt-md-0">
+      <img src="images\hero1.jpg" class="img-fluid rounded-4 shadow" alt="Flower Banner">
+    </div>
+  </div>
+</header>
+
+  <!-- Product Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Featured Flowers</h2>
+
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/rose.jpg" class="card-img-top" alt="Red Roses">
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title">Red Roses</h5>
+              <p class="card-text">Elegant bouquet for special moments.</p>
+              <a href="#" class="btn btn-outline-primary mt-auto">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/tulip.jpg" class="card-img-top" alt="Tulip Delight">
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title">Tulip Delight</h5>
+              <p class="card-text">Fresh tulips to brighten your day.</p>
+              <a href="#" class="btn btn-outline-primary mt-auto">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/sunflower.jpg" class="card-img-top" alt="Sunflower Joy">
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title">Sunflower Joy</h5>
+              <p class="card-text">Bring sunshine into your home.</p>
+              <a href="#" class="btn btn-outline-primary mt-auto">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section>
+
+  <!--responsive products cards-->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Our Bestselling Bouquets</h2>
+  
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100">
+        <img src="images\rosebouquets.jpg" class="card-img-top" alt="Rose Bouquet">
+        <div class="card-body text-center">
+          <h5> Roses</h5>
+          <p>Rs. 599</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100">
+        <img src="images/tulipbouquets.jpg" class="card-img-top" alt="Tulip Bouquet">
+        <div class="card-body text-center">
+          <h5> Tulips</h5>
+          <p>Rs. 699</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100">
+        <img src="images/orchidbouquets.jpg" class="card-img-top" alt="Orchid Bouquet">
+        <div class="card-body text-center">
+          <h5> Orchids</h5>
+          <p>Rs. 799</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100">
+        <img src="images/lilybouquets.jpg" class="card-img-top" alt="Lily Bouquet">
+        <div class="card-body text-center">
+          <h5> Lilies</h5>
+          <p>Rs. 749</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY AOS ANNIMATION -->
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+  
+</script>
+
+   <!--footer-->>
+  <footer class="bg-dark text-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1">© 2025 Transflower Store. All rights reserved.</p>
+    <p class="mb-0">Follow us on 
+      <a href="#" class="text-danger text-decoration-none">Instagram</a> | 
+      <a href="#" class="text-danger text-decoration-none">Facebook</a>
+    </p>
+  </div>
+</footer>
+  <!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact Transflower Store</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Write your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+</body>
+</html>

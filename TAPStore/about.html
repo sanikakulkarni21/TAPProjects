@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transflower - Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- include icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS LINKS-->
+   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Include Navbar -->
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-flower1 me-2"></i>Transflower
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html"><i class="bi bi-basket"></i> Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+    <button class="btn btn-outline-light ms-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+  Contact Us
+</button>
+  </div>
+</nav>
+
+     
+  <!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact Transflower Store</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Write your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+  <!-- Copy from index.html -->
+
+  <section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="images/team.jpg" class="img-fluid rounded" alt="Our Team">
+      </div>
+      <div class="col-md-6">
+        <h2>About Transflower Store</h2>
+        <p>Founded in 2020, Transflower Store started with a simple dream — to make the world a little happier with flowers. Our team of florists handpick fresh blooms from local farms and deliver them with love.</p>
+        <p>We believe flowers speak a universal language — of emotions, of connections, of beauty. Each bouquet we deliver is crafted with care and purpose.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- testionial carousel -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">What Our Customers Say</h2>
+  
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active text-center">
+        <blockquote class="blockquote">
+          <p class="mb-4">"Transflower never disappoints! My anniversary bouquet was perfect."</p>
+          <footer class="blockquote-footer">Sneha K.</footer>
+        </blockquote>
+      </div>
+
+      <div class="carousel-item text-center">
+        <blockquote class="blockquote">
+          <p class="mb-4">"Fresh flowers and fast delivery — simply beautiful!"</p>
+          <footer class="blockquote-footer">Rahul M.</footer>
+        </blockquote>
+      </div>
+
+      <div class="carousel-item text-center">
+        <blockquote class="blockquote">
+          <p class="mb-4">"Best online flower store in Pune! Highly recommend."</p>
+          <footer class="blockquote-footer">Aditi S.</footer>
+        </blockquote>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+
+
+<!--FAQ section-->
+
+<section class="container my-5">
+  <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+          How long does delivery take?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We deliver within 24 hours for all Pune city orders and 2–3 days for other cities.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+          Can I customize my bouquet?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Absolutely! You can choose flower types, wrapping styles, and message cards.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY AOS ANNIMATION -->
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+  
+</script>
+
+ 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Footer -->
+   <!-- Footer -->
+  <footer class=" text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Transflower Store. All rights reserved.| Designed with 💗 using Bootstrap</p>
+   
+  </footer>
+  <!-- Copy from index.html -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
+</body>
+</html>
