@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transflower Store — Register</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --nav-height: 64px;
+      --brand-color: #1a433c;
+      --accent: #ff6a00;
+    }
+
+    html, body { height: 100%; margin: 0; font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial; color: #0b1b26; -webkit-font-smoothing:antialiased; }
+
+    /* Make navbar fixed at top and visible */
+    .navbar-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      z-index: 10850;
+      background: linear-gradient(180deg,var(--brand-color), #0f3a35);
+    }
+
+    .navbar-fixed .navbar-brand, .navbar-fixed .nav-link {
+      color: #fff !important;
+    }
+    .navbar-fixed .nav-link:hover { color: var(--accent) !important; }
+
+    /* Add top padding so page content is not hidden under fixed navbar */
+    .page-body {
+      padding-top: calc(var(--nav-height) + 1rem);
+      min-height: 100vh;
+      background-image: url('images/register.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-start;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    /* Card container centered */
+    .auth-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .glass-card {
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(4px);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(7,23,40,0.12);
+    }
+
+    .card-header-custom {
+      background-color: var(--brand-color);
+      color: #fff;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 0 0.15rem rgba(26,67,60,0.12);
+      border-color: var(--brand-color);
+    }
+
+    .btn-register {
+      background-color: var(--brand-color);
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .btn-register:hover { opacity: .95; transform: translateY(-1px); transition: 0.12s; }
+
+    footer.footer-custom {
+      background: rgba(7,7,7,0.6);
+      color: rgba(255,255,255,0.9);
+      padding: 18px 0;
+      margin-top: 36px;
+    }
+
+    @media (max-width: 576px) {
+      .page-body { padding-top: calc(var(--nav-height) + 0.9rem); }
+      .auth-wrap { padding-top: 1.5rem; padding-bottom: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <br>
+
+  <!-- NAVBAR (fixed) -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <i class="bi bi-flower1" style="font-size:1.15rem;color:var(--accent)"></i>
+        <span class="fw-bold">Transflower</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="products.html"><i class="bi bi-basket"></i> Products</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+          <li class="nav-item d-lg-flex align-items-center ms-3">
+            <a class="btn btn-outline-light me-2 d-none d-lg-inline" href="login.html">Login</a>
+            <a class="btn btn-light" href="products.html" style="color:var(--brand-color); font-weight:700;">Shop Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE BODY -->
+  <div class="page-body">
+    <div class="container auth-wrap">
+      <div class="row justify-content-center w-100">
+        <div class="col-sm-10 col-md-8 col-lg-5">
+          <div class="card glass-card">
+            <div class="card-header text-center card-header-custom">
+              <h4 class="mb-0">🌸 Create Your Account</h4>
+            </div>
+
+            <div class="card-body p-4">
+              <!-- Alert placeholder -->
+              <div id="alertPlaceholder" aria-live="polite"></div>
+
+              <!-- Registration form -->
+              <form id="registrationForm" novalidate>
+                <div class="mb-3">
+                  <label for="firstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="firstName" required>
+                  <div class="invalid-feedback">Please enter your first name.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" required>
+                  <div class="invalid-feedback">Please enter your last name.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" required>
+                  <div class="invalid-feedback">Please provide a valid email.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="password" required minlength="6" aria-describedby="passwordHelp">
+                    <button type="button" class="btn btn-outline-secondary" id="togglePassword" aria-label="Show password">Show</button>
+                  </div>
+                  <div id="passwordHelp" class="form-text">Minimum 6 characters. Use letters & numbers for better strength.</div>
+                  <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="terms" required>
+                  <label class="form-check-label" for="terms">
+                    I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms &amp; Conditions</a>
+                  </label>
+                  <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+
+                <button type="submit" class="btn btn-register w-100">Register</button>
+
+                <div class="text-center mt-3">
+                  <small>Already have an account? <a href="login.html">Login here</a></small>
+                </div>
+              </form>
+            </div> <!-- /.card-body -->
+          </div> <!-- /.card -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h5 class="modal-title" id="termsModalLabel">Transflower Store — Terms &amp; Conditions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Welcome!</strong> By registering at Transflower Store you agree to our terms. Replace this text with your real Terms &amp; Conditions.</p>
+          <hr>
+          <p class="small text-muted">This is example content only.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" id="acceptTermsBtn">Accept &amp; Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success toast (top-right) -->
+  <div class="position-fixed top-0 end-0 p-3" style="z-index:10860;">
+    <div id="regSuccessToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">Registration successful! Welcome to Transflower 🌸</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // Small helper to show inline alerts
+      function showAlert(message, type = 'danger') {
+        const placeholder = document.getElementById('alertPlaceholder');
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = `
+          <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        `;
+        placeholder.innerHTML = '';
+        placeholder.append(wrapper);
+      }
+
+      // Toggle password visibility
+      const togglePwdBtn = document.getElementById('togglePassword');
+      const pwdInput = document.getElementById('password');
+      togglePwdBtn.addEventListener('click', () => {
+        const isHidden = pwdInput.type === 'password';
+        pwdInput.type = isHidden ? 'text' : 'password';
+        togglePwdBtn.textContent = isHidden ? 'Hide' : 'Show';
+        pwdInput.focus();
+      });
+
+      // Accept terms button in modal checks the checkbox and closes modal
+      document.getElementById('acceptTermsBtn').addEventListener('click', () => {
+        document.getElementById('terms').checked = true;
+        const modalEl = document.getElementById('termsModal');
+        const modalInstance = bootstrap.Modal.getOrCreateInstance(modalEl);
+        modalInstance.hide();
+      });
+
+      // Form validation & simulated submit
+      const form = document.getElementById('registrationForm');
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+          showAlert('Please fix the errors highlighted below and try again.', 'warning');
+          return;
+        }
+
+        // Show success toast and inline message
+        const toastEl = document.getElementById('regSuccessToast');
+        const toast = new bootstrap.Toast(toastEl, { delay: 3000 });
+        toast.show();
+
+        showAlert('<strong>Success!</strong> Account created. Redirecting to login...', 'success');
+
+        setTimeout(() => {
+          form.reset();
+          form.classList.remove('was-validated');
+          // window.location.href = 'login.html'; // uncomment when backend ready
+        }, 1300);
+      }, false);
+
+      // Accessibility: focus accept button when modal shown
+      const termsModalEl = document.getElementById('termsModal');
+      termsModalEl.addEventListener('shown.bs.modal', () => {
+        document.getElementById('acceptTermsBtn').focus();
+      });
+    })();
+  </script>
+
+
+
+  ...
+<!-- Your main page content ends here -->
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">About Transflower</h5>
+        <p>We provide quality tech and lifestyle products with a touch of elegance and innovation.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="catalog.html" class="text-white text-decoration-none">Products</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Connect with Us</h5>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+        <p class="mt-3 mb-0">Email: support@transflower.in</p>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <small>© 2025 Transflower Store. All Rights Reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS (important for icons and responsiveness) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</body>
+</html>

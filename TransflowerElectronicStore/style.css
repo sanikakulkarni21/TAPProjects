@@ -1,0 +1,340 @@
+/* style.css - optional overrides */
+
+
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Slightly larger hero padding on big screens */
+@media (min-width: 992px) {
+  section.bg-light.py-5 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Make card images cover */
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Improve footer contrast */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+ 
+    /* 🌸 Custom Carousel Image Styling */
+    .carousel-item img {
+      height: 400px;         /* Fixes all carousel images to same height */
+      object-fit: cover;     /* Keeps image centered and prevents stretching */
+    }
+
+    /* 📱 Make smaller height on mobile screens */
+    @media (max-width: 768px) {
+      .carousel-item img {
+        height: 250px;       /* Smaller height for mobile devices */
+      }
+    }
+  
+    html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Transflower Theme ===== */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* nav bar Override Bootstrap colors */
+:root {
+  --bs-primary: #1a433c;      
+  --bs-secondary: #178a1b;     
+  --bs-warning: #a32525;      
+}
+
+/* Navbar tweak */
+.navbar {
+  background-color: var(--bs-primary) !important;
+}
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+.navbar .nav-link:hover {
+  color: var(--bs-warning) !important;
+}
+
+/*product.html Buttons */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+  background-color: #a32525;
+  border-color: #a32525;
+}
+
+
+/* background image */
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(189, 244, 236, 0.4),
+ rgba(189, 244, 236, 0.4)
+    ),
+    url('images/backgroundimg.avif');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* background image caption*/
+
+.text-box {
+  width: 90%;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 62px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 24px;
+  color: #000;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 24px;
+    background: #135115;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    background: #6a0f0f;
+    color: #000;
+}
+
+/* index.html 2nd section*/
+  .hero-section {
+      background-color: #f9f9f9;
+      padding: 80px 0;
+    }
+    .hero-content h5 {
+      color: #e63946;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #111;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .hero-content .btn-primary {
+      background-color: #6f42c1;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 500;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+
+    /*left and right cards  */
+    .offer-section {
+  padding: 60px 0;
+}
+
+/* Square Cards */
+.offer-card {
+  position: relative;
+  color: #fff;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* ✅ makes the card perfectly square */
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.offer-card:hover {
+  transform: scale(1.03);
+}
+
+/* Overlay for readability */
+.offer-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Inner text layer */
+.offer-card .overlay {
+  position: relative;
+  z-index: 1;
+}
+
+/* Theme overlays */
+.offer-card.red::before {
+  background: rgba(165, 25, 25, 0.45);
+}
+
+.offer-card.purple::before {
+  background: rgba(90, 40, 120, 0.45);
+}
+
+/* Button style */
+.offer-card .btn {
+  margin-top: 10px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+
+.offer-card .btn:hover {
+  background-color: #1a433c;
+  color: #fff;
+}
+
+/*footer style*/
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+footer a:hover {
+  text-decoration: underline !important;
+}
+
+footer {
+  background-color: var(--bs-secondary) !important;
+}
+
+
+
+/* product navigation setup*/
+/* 🌸 Center the tabs and give them a fresh color theme */
+.nav-tabs {
+  justify-content: center;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+  color: #6c757d;
+  font-weight: 600;
+  border: none;
+  margin: 0 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #0d6efd;
+  background-color: #e9ecef;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #0d6efd;
+  color: white !important;
+  border: none;
+}
+
+/* 🌺 Tab content box */
+.tab-content {
+  background-color: #ffffff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 🌼 Center the product cards */
+.tab-pane .row {
+  justify-content: center;
+}
+
+/* 🌻 Product cards styling */
+.card {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  text-align: center;
+}
+
+/* 🛍️ Button styling */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+

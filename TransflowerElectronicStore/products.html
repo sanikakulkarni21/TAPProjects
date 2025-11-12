@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transflower Store</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- include icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- AOS LINKS-->
+   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">  
+
+<!-- Custom CSS (optional) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-flower1 me-2"></i>Transflower
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html"><i class="bi bi-basket"></i> Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+       
+        
+         <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>   <!-- 👈 Link to Login page -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a> <!-- 👈 Link to Register page -->
+        </li>
+       <button class="btn btn-outline-light ms-3" data-bs-toggle="modal" data-bs-target="#contactModal"> Contact Us</button>
+       <form class="d-flex ms-lg-3">
+  <input class="form-control me-2" type="search" placeholder="Search products...">
+  <button class="btn btn-light" type="submit">Search</button>
+</form>
+      </ul>
+    </div>
+      
+    
+
+
+</div>
+
+  </div>
+</nav>
+ 
+<section class="container my-5">
+  <h2 class="text-center mb-4">Explore Our Collections</h2>
+
+  <!-- Tab Navigation -->
+  <div class="container my-2">
+    <ul class="nav nav-tabs" id="categoryTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab-smartphones" data-bs-toggle="tab" data-bs-target="#smartphones" type="button" role="tab" aria-controls="smartphones" aria-selected="true">Smartphones</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-accessories" data-bs-toggle="tab" data-bs-target="#accessories" type="button" role="tab" aria-controls="accessories" aria-selected="false">Accessories</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-home" data-bs-toggle="tab" data-bs-target="#homeappliances" type="button" role="tab" aria-controls="homeappliances" aria-selected="false">Home Appliances</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-cameras" data-bs-toggle="tab" data-bs-target="#cameras" type="button" role="tab" aria-controls="cameras" aria-selected="false">Cameras</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-laptops" data-bs-toggle="tab" data-bs-target="#laptops" type="button" role="tab" aria-controls="laptops" aria-selected="false">Laptops</button>
+      </li>
+    </ul>
+
+    <div class="tab-content p-4 border border-top-0 mt-0" id="categoryTabsContent">
+      <!-- SMARTPHONES -->
+      <div class="tab-pane fade show active" id="smartphones" role="tabpanel" aria-labelledby="tab-smartphones">
+        <p class="text-center text-muted">Explore our vibrant collection of Smartphones.</p>
+        <div class="row g-4 justify-content-center">
+          <!-- product 1 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\google pixel 7 series 1.webp" class="card-img-top" alt="Product 1">
+              <div class="card-body">
+                <h5 class="card-title">Google Pixel-7 Series </h5>
+                <p class="card-text">60,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- product 2 -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\z fold 6 9.jpg" class="card-img-top" alt="Product 2">
+              <div class="card-body">
+                <h5 class="card-title">Z Fold 6</h5>
+                <p class="card-text">1,60,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\oneplus2.png" class="card-img-top" alt="Product 3">
+              <div class="card-body">
+                <h5 class="card-title">One Plus</h5>
+                <p class="card-text">30,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\i phone14 3.webp" class="card-img-top" alt="Product 4">
+              <div class="card-body">
+                <h5 class="card-title">IPhone 14 </h5>
+                <p class="card-text">90,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\z fold5 10.jpg" class="card-img-top" alt="Product 5">
+              <div class="card-body">
+                <h5 class="card-title">Z Fold 5</h5>
+                <p class="card-text">1,40,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\vivo v25 4.png" class="card-img-top" alt="Product 6">
+              <div class="card-body">
+                <h5 class="card-title">Vivo V25</h5>
+                <p class="card-text">30,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\iphone 12 5.avif" class="card-img-top" alt="Product 7">
+              <div class="card-body">
+                <h5 class="card-title">IPhone 12</h5>
+                <p class="card-text">40,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\iphone14 6.jpg" class="card-img-top" alt="Product 8">
+              <div class="card-body">
+                <h5 class="card-title">IPhone 14</h5>
+                <p class="card-text">80,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\redmi 7.webp" class="card-img-top" alt="Product 9">
+              <div class="card-body">
+                <h5 class="card-title">Redmi-7</h5>
+                <p class="card-text">20,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\samsung galaxyS23 8.jpg" class="card-img-top" alt="Product 10">
+              <div class="card-body">
+                <h5 class="card-title">Samsung Galaxy S23</h5>
+                <p class="card-text">40,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- ACCESSORIES -->
+      <div class="tab-pane fade" id="accessories" role="tabpanel" aria-labelledby="tab-accessories">
+        <p class="text-center text-muted">Discover stylish and functional accessories that complement your lifestyle. From wireless gadgets to trendy wearables, find everything you need to stay connected and fashionable.</p>
+        <div class="row g-4 justify-content-center">
+          <!-- accessories product examples -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images\WirelessEarbuds.jpg" class="card-img-top" alt="AirPods">
+              <div class="card-body">
+                <h5 class="card-title">AirPods Pro</h5>
+                <p class="card-text">$199.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\bluetooth speaker.avif" class="card-img-top" alt="Bluetooth Speaker">
+              <div class="card-body">
+                <h5 class="card-title">Bluetooth Speaker</h5>
+                <p class="card-text">1000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\boat headphones.webp" class="card-img-top" alt="eadPhones">
+              <div class="card-body">
+                <h5 class="card-title">Boat HeadPhones</h5>
+                <p class="card-text">10,000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\charging cable.jpg" class="card-img-top" alt="Charging Cable">
+              <div class="card-body">
+                <h5 class="card-title">Charging Cable</h5>
+                <p class="card-text">500</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\keyboard.jpg" class="card-img-top" alt="Keyboard">
+              <div class="card-body">
+                <h5 class="card-title">Wireless Keyboard</h5>
+                <p class="card-text">1500</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\phone case.avif" class="card-img-top" alt="Phone Case">
+              <div class="card-body">
+                <h5 class="card-title">Phone case</h5>
+                <p class="card-text">199</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\powerbank.jpg" class="card-img-top" alt="Power Bank">
+              <div class="card-body">
+                <h5 class="card-title">Power Bank </h5>
+                <p class="card-text">2000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\samsung buds.png" class="card-img-top" alt="Samsung Buds">
+              <div class="card-body">
+                <h5 class="card-title">Samsung buds</h5>
+                <p class="card-text">900</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\smart watch.jpg" class="card-img-top" alt="Smart Watch">
+              <div class="card-body">
+                <h5 class="card-title">Smart Watch</h5>
+                <p class="card-text">5000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\usb hub.jpg" class="card-img-top" alt="USB Hub">
+              <div class="card-body">
+                <h5 class="card-title">USB Hub</h5>
+                <p class="card-text">1200</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- add more accessory cards here -->
+        </div>
+      </div>
+
+      <!-- HOME APPLIANCES -->
+      <div class="tab-pane fade" id="homeappliances" role="tabpanel" aria-labelledby="tab-home">
+        <p class="text-center text-muted">Upgrade your home with smart and efficient appliances designed for modern living. From kitchen essentials to time-saving gadgets, make everyday tasks effortless and convenient.</p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h1.jpg" class="card-img-top" alt="1">
+              <div class="card-body">
+                <h5 class="card-title">Air Conditioner</h5>
+                <p class="card-text">2000</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h2.jpg" class="card-img-top" alt="2">
+              <div class="card-body">
+                <h5 class="card-title">Washing Mashine</h5>
+                <p class="card-text">$399.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h3.avif" class="card-img-top" alt="3">
+              <div class="card-body">
+                <h5 class="card-title">Microwave Oven</h5>
+                <p class="card-text">$399.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h4.jpg" class="card-img-top" alt="4">
+              <div class="card-body">
+                <h5 class="card-title">vaccum Machine</h5>
+                <p class="card-text">$399.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h6.png" class="card-img-top" alt="5">
+              <div class="card-body">
+                <h5 class="card-title">iron</h5>
+                <p class="card-text">$399.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h6.webp" class="card-img-top" alt="6">
+              <div class="card-body">
+                <h5 class="card-title">mixer</h5>
+                <p class="card-text">$399.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h7.webp" class="card-img-top" alt="7">
+              <div class="card-body">
+                <h5 class="card-title">Air Freshner</h5>
+                <p class="card-text">$399.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h8.jpg" class="card-img-top" alt="8">
+              <div class="card-body">
+                <h5 class="card-title">Celling Fan</h5>
+                <p class="card-text">$399.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h9.webp" class="card-img-top" alt="9">
+              <div class="card-body">
+                <h5 class="card-title">water Heater</h5>
+                <p class="card-text">$399.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\h10.jpg" class="card-img-top" alt="10">
+              <div class="card-body">
+                <h5 class="card-title">fridge</h5>
+                <p class="card-text">$399.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAMERAS -->
+      <div class="tab-pane fade" id="cameras" role="tabpanel" aria-labelledby="tab-cameras">
+        <p class="text-center text-muted">Capture life's moments with our range of high-quality cameras. Whether you're a professional or a casual snapper, find the perfect camera to suit your needs.</p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c1.jpg" class="card-img-top" alt="1">
+              <div class="card-body">
+                <h5 class="card-title">Canon EOS</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c2.jpg" class="card-img-top" alt="2">
+              <div class="card-body">
+                <h5 class="card-title">Nikon Z50</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c3.jpg" class="card-img-top" alt="3">
+              <div class="card-body">
+                <h5 class="card-title">Sony Alpha ZV-E10</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c4.avif" class="card-img-top" alt="4">
+              <div class="card-body">
+                <h5 class="card-title">GoPro Hero 12</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+               
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c5.webp" class="card-img-top" alt="5">
+              <div class="card-body">
+                <h5 class="card-title">DJI Pocket 3</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c6.jpg" class="card-img-top" alt="6">
+              <div class="card-body">
+                <h5 class="card-title">Fujifilm X-S10</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c7.jpg" class="card-img-top" alt="7">
+              <div class="card-body">
+                <h5 class="card-title">Canon PowerShot</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c8.jpg" class="card-img-top" alt="8">
+              <div class="card-body">
+                <h5 class="card-title">Insta360 X3</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c9.jpg" class="card-img-top" alt="9">
+              <div class="card-body">
+                <h5 class="card-title">Panasonic Lumix</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images2\c10.webp" class="card-img-top" alt="10">
+              <div class="card-body">
+                <h5 class="card-title">Polaroid Instant</h5>
+                <p class="card-text">$899.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- LAPTOPS -->
+      <div class="tab-pane fade" id="laptops" role="tabpanel" aria-labelledby="tab-laptops">
+        <p class="text-center text-muted">Power up your productivity with our latest range of laptops built for performance and style.</p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="images/macbook.jpg" class="card-img-top" alt="MacBook">
+              <div class="card-body">
+                <h5 class="card-title">MacBook Air</h5>
+                <p class="card-text">$999.99</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div> <!-- /.tab-content -->
+  </div> <!-- /.container -->
+</section>
+
+
+<!-- APPLY AOS ANNIMATION -->
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+  
+</script>
+
+
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Our Products</h2>
+  <div class="row g-4">
+    
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100">
+        <img src="images/wirelessearbuds.webp" class="card-img-top" alt="Product 1">
+        <div class="card-body">
+          <h5 class="card-title">Wireless Earbuds</h5>
+          <p class="card-text">$59.99</p>
+          <a href="#" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100">
+        <img src="images/smartWatch1.jpg" class="card-img-top" alt="Product 2">
+        <div class="card-body">
+          <h5 class="card-title">Smart Watch</h5>
+          <p class="card-text">$129.99</p>
+          <a href="#" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <img src="images/camera.jpg" class="card-img-top" alt="Camera">
+        <div class="card-body text-center">
+          <h5 class="card-title">Digital Camera</h5>
+          <p class="card-text">$399.00</p>
+          <button class="btn btn-outline-primary">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm">
+        <img src="images/laptop.jpg" class="card-img-top" alt="Laptop">
+        <div class="card-body text-center">
+          <h5 class="card-title">Laptop</h5>
+          <p class="card-text">$899.00</p>
+          <button class="btn btn-outline-primary">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">About Transflower</h5>
+        <p>We provide quality tech and lifestyle products with a touch of elegance and innovation.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="catalog.html" class="text-white text-decoration-none">Products</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Connect with Us</h5>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+        <p class="mt-3 mb-0">Email: support@transflower.in</p>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <small>© 2025 Transflower Store. All Rights Reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- Bootstrap JS (important for icons and responsiveness) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
