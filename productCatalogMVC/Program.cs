@@ -1,7 +1,23 @@
+using productCatalogMVC.Repositories.Interfaces;
+using productCatalogMVC.Repositories.Implementations;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IProductRepository>(sp =>
+{
+    var cfg = sp.GetRequiredService<IConfiguration>();
+    return new ProductRepository(cfg.GetConnectionString("MySqlConnection"));
+});
+
+builder.Services.AddScoped<ICartRepository>(sp =>
+{
+    var cfg = sp.GetRequiredService<IConfiguration>();
+    return new CartRepository(cfg.GetConnectionString("MySqlConnection"));
+});
 
 var app = builder.Build();
 
@@ -14,6 +30,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
@@ -24,6 +41,10 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Product}/{action=Index}/{id?}");
 
 
 app.Run();
