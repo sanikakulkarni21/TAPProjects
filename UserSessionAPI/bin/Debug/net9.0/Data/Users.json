@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 1,
+    "Username": "admin",
+    "Password": "admin123",
+    "Email": "admin@test.com"
+  },
+  {
+    "Id": 2,
+    "Username": "sejalkulkarni",
+    "Password": "sejal123",
+    "Email": "sejal@test.com"
+  },
+  {
+    "Id": 3,
+    "Username": "sanikakulkarni",
+    "Password": "sanika123",
+    "Email": "sanika@test.com"
+  },
+  {
+    "Id": 4,
+    "Username": "sohamkulkarni",
+    "Password": "soham123",
+    "Email": "soham@test.com"
+  },
+  {
+    "Id": 5,
+    "Username": "shubham",
+    "Password": "soham123",
+    "Email": "soham@test.com"
+  },
+  {
+    "Id": 6,
+    "Username": "vedant",
+    "Password": "vedant123",
+    "Email": "vedant@test.com"
+  },
+  {
+    "Id": 7,
+    "Username": "samu",
+    "Password": "samu123",
+    "Email": "samu@test.com"
+  }
+]
