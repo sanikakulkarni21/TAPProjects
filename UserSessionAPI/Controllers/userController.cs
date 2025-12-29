@@ -61,7 +61,7 @@ public IActionResult Test()
         {
             var user = _userService.GetById(id);
             if (user == null)
-                return NotFound(new { Message = "User not found" });
+                return NotFound(new { Message = "User detailsnot found" });
 
             return Ok(new{user.Id, user.Username, user.Email});
         }
