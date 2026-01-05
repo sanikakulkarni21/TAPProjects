@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "G//icm8jKtk=",
+  "success": true,
+  "projectFilePath": "D:\\Tap\\TAPProjects\\ECommerceSolution\\src\\ApiGateway\\ECommerce.ApiGateway\\ECommerce.ApiGateway.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sejal\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\sejal\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\sejal\\.nuget\\packages\\system.io.hashing\\8.0.0\\system.io.hashing.8.0.0.nupkg.sha512",
+    "C:\\Users\\sejal\\.nuget\\packages\\yarp.reverseproxy\\2.3.0\\yarp.reverseproxy.2.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
