@@ -22,23 +22,5 @@
     "Username": "sohamkulkarni",
     "Password": "soham123",
     "Email": "soham@test.com"
-  },
-  {
-    "Id": 5,
-    "Username": "shubham",
-    "Password": "soham123",
-    "Email": "soham@test.com"
-  },
-  {
-    "Id": 6,
-    "Username": "vedant",
-    "Password": "vedant123",
-    "Email": "vedant@test.com"
-  },
-  {
-    "Id": 7,
-    "Username": "samu",
-    "Password": "samu123",
-    "Email": "samu@test.com"
   }
 ]

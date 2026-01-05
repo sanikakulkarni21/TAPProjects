@@ -48,7 +48,7 @@ public IActionResult Test()
 }
 
         // GET: api/user/all
-        [HttpGet("all")]
+        [HttpGet("getAll")]
         public IActionResult GetAllUsers()
         {
             var users = _userService.GetAllUsers();
