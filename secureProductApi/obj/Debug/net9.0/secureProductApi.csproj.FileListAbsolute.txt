@@ -31,3 +31,11 @@ D:\Tap\TAPProjects\secureProductApi\obj\Debug\net9.0\refint\secureProductApi.dll
 D:\Tap\TAPProjects\secureProductApi\obj\Debug\net9.0\secureProductApi.pdb
 D:\Tap\TAPProjects\secureProductApi\obj\Debug\net9.0\secureProductApi.genruntimeconfig.cache
 D:\Tap\TAPProjects\secureProductApi\obj\Debug\net9.0\ref\secureProductApi.dll
+D:\Tap\TAPProjects\secureProductApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Tap\TAPProjects\secureProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Tap\TAPProjects\secureProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Tap\TAPProjects\secureProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Tap\TAPProjects\secureProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Tap\TAPProjects\secureProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Tap\TAPProjects\secureProductApi\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\Tap\TAPProjects\secureProductApi\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
