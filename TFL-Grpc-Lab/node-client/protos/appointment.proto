@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+
+package hospital;
+
+service AppointmentService {
+  rpc GreetPatient (PatientRequest) returns (PatientReply);
+}
+
+message PatientRequest {
+  string patientName = 1;
+}
+
+message PatientReply {
+  string message = 1;
+}
